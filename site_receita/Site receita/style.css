@@ -1,0 +1,75 @@
+/* Container central para os links */
+body {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Georgia", serif;
+    background: linear-gradient(
+        to right,
+        #0f732d 0%,
+        #0f732d 33.33%,
+        #ffffff 33.33%,
+        #ffffff 66.66%,
+        #c71520 66.66%,
+        #c71520 100%
+    );
+}
+
+/* Cabeçalho */
+header {
+    grid-column: 1 / 4;
+    background: #2f6e3c;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 30px;
+    font-style: italic;
+    border-bottom: 4px solid #ccc;
+}
+
+/* Mario e Luigi */
+body img:first-of-type {
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+    width: 115%;
+    max-width: 1000px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+body img:last-of-type {
+    grid-column: 3;
+    justify-self: center;
+    align-self: center;
+    width: 115%;
+    max-width: 1000px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Agrupar links em coluna central */
+h1 {
+    grid-column: 2;           /* centro */
+    display: flex;
+    flex-direction: column;   /* empilha os links */
+    align-items: center;      /* centraliza horizontalmente */
+    justify-content: center;  /* centraliza verticalmente dentro da coluna */
+    margin: 5px 0;            /* espaçamento entre os links */
+}
+
+h1 a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 32px;
+    font-style: italic;
+    padding: 10px 0;
+    transition: 0.2s;
+}
+
+h1 a:hover {
+    color: #2f6e3c;
+    transform: scale(1.05);
+}
